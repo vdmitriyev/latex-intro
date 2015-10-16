@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.33pt}
+\beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Getting started}{3}{1}{1}
 \beamer@subsectionintoc {1}{1}{Getting started}{3}{1}{1}
 \beamer@sectionintoc {2}{General}{14}{1}{2}
@@ -13,7 +13,9 @@
 \beamer@sectionintoc {4}{Figures}{30}{1}{4}
 \beamer@subsectionintoc {4}{1}{Figures}{30}{1}{4}
 \beamer@subsectionintoc {4}{2}{Keeping organized}{33}{1}{4}
-\beamer@sectionintoc {5}{More}{35}{1}{5}
-\beamer@subsectionintoc {5}{1}{What's next?}{35}{1}{5}
-\beamer@subsectionintoc {5}{2}{Book}{36}{1}{5}
-\beamer@subsectionintoc {5}{3}{Homework}{37}{1}{5}
+\beamer@sectionintoc {5}{LaTeX In Browser}{35}{1}{5}
+\beamer@subsectionintoc {5}{1}{LaTeX In Browser}{35}{1}{5}
+\beamer@sectionintoc {6}{More}{38}{1}{6}
+\beamer@subsectionintoc {6}{1}{What's next?}{38}{1}{6}
+\beamer@subsectionintoc {6}{2}{Materials}{39}{1}{6}
+\beamer@subsectionintoc {6}{3}{Homework}{40}{1}{6}
