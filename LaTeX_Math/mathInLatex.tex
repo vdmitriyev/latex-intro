@@ -1,0 +1,78 @@
+\documentclass[slidestop,compress,mathserif]{beamer}
+\usetheme{Frankfurt}
+\usecolortheme{seagull}
+
+% Load packages
+\usepackage{alltt}
+\usepackage{verbatim}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{verbatim}
+%\usepackage{musixtex}
+%\usepackage{xymtexps}
+\usepackage{feynmp}
+
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+% Title 
+% Note: [short title]{long title}, [short author(s) name]{long author(s) name}
+\title{Math and LaTeX}
+\subtitle{}
+\author{Viktor Dmitriyev} 
+\institute{Adapter from Mini Course on LaTeX by \href{https://github.com/OpenIntroOrg/mini-course-materials}{David Diez}}
+\date{}
+
+\begin{document}
+\definecolor{highlight}{rgb}{.7,.1,.1}
+\definecolor{command}{rgb}{.1,.1,.9}
+\definecolor{comment}{rgb}{1,0,0}
+\definecolor{braces}{rgb}{0,0.5,0}
+\newenvironment{act}[1]{{\color{command}#1}}{}
+\newcommand{\lcom}[1]{{\color{command}$\backslash$#1}}
+\newcommand{\larg}[1]{{\color{braces}$\{${\color{black}#1}$\}$}}
+\newcommand{\mathText}[1]{{\color{braces}\${\color{black}#1}\$}}
+
+
+\frame{ \titlepage }
+
+\begin{frame}
+  \frametitle{Outline}
+  \begin{itemize}
+  \item Mathematics in LaTeX
+  \end{itemize}
+\end{frame}
+
+\begin{frame}  \frametitle{Guide to LaTeX}
+The book \textit{Guide to LaTeX} offers a very nice introduction, and we will closely follow some of the examples in these chapters in this class:
+\end{frame}
+
+\part{}
+
+\include{math/math}
+
+\section[Summary]{Summary}
+\subsection[Summary]{Summary}
+
+\begin{frame}  \frametitle{Summary}
+After this class, you should have a general idea of
+	\vspace{1mm} \\
+		\begin{itemize}
+			\item using the math modes in LaTeX
+		\end{itemize}
+	\vspace{1mm}
+
+Any questions?
+\end{frame}
+
+
+
+
+
+\end{document}
