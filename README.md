@@ -1,15 +1,20 @@
 ### About
 
-Repository that contains materials with introduction materials for LaTeX usage.
+Introduction materials for LaTeX usage.
 
 ### Project Organization
 
 Project organized as follows:
 
-* [Latex Basics](LaTeX_Basics)
-* [LaTeX BibTeX](LaTeX_BibTeX)
-* [LaTeX Math](LaTeX_Math)
-* [LaTeX Tips](LaTeX_Tips)
+* [Latex Basics](LaTeX_Basics) [pdf](LaTeX_Basics/basicsOfLatex.pdf)
+* [LaTeX BibTeX](LaTeX_BibTeX) [pdf](LaTeX_BibTeX/bibtexInLatex.pdf)
+* [LaTeX Math](LaTeX_Math) [pdf](LaTeX_Math/mathInLatex.pdf)
+* [LaTeX Tips](LaTeX_Tips) [pdf](LaTeX_Tips/tipsForLatex.pdf)
+
+
+### Authors
+
+* Viktor Dmitriyev
 
 ### Credits
 
