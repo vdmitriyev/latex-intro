@@ -20,7 +20,7 @@
 
 % Title 
 % Note: [short title]{long title}, [short author(s) name]{long author(s) name}
-\title{Overview of LaTeX}
+\title{LaTeX Basics}
 \subtitle{}
 \author{Viktor Dmitriyev} 
 \institute{Adapter from Mini Course on LaTeX by \href{https://github.com/OpenIntroOrg/mini-course-materials}{David Diez}}
@@ -386,74 +386,79 @@ R output directly copied/pasted into LaTeX:
 \end{table}
 \end{frame}
 
-\frame{ \frametitle{Practice}
-Produce the following result:
-\begin{center}
-\begin{tabular}{l rrr}
-\hline
-& mean & sd & n \\
-\hline
-S1 & 6.5 & 1.3 & 17 \\
-S2 & 12.2 & 1.4 & 25 \\
-\hline
-\end{tabular}
-\end{center}
-Some examples may be utilized in \texttt{\color{highlight}latexTemp.tex}.
-}
-
+\begin{frame} \frametitle{Practice}
+	
+	Produce the following result:
+	\begin{center}
+	\begin{tabular}{l rrr}
+	\hline
+	& mean & sd & n \\
+	\hline
+	S1 & 6.5 & 1.3 & 17 \\
+	S2 & 12.2 & 1.4 & 25 \\
+	\hline
+	\end{tabular}
+	\end{center}
+	
+	Some examples may be utilized in \texttt{\color{highlight}latexTemp.tex}.
+	
+\end{frame}
 
 \section[Figures]{Figures}
 \subsection[Figures]{Figures}
 \begin{frame} \frametitle{Basic figures}
-Add figures using the {\color{command}$\backslash$includegraphics} command.
-\begin{center}
-\includegraphics[height=15mm]{basicsOfLatex/figures/basicFigures}
-\end{center}
-The first file is stored in the same folder as the LaTeX file. The second is a couple folders away.
-\vspace{0.5cm} \\
-\emph{The files and folder names used should have no spaces.}
-\vspace{0.5cm} \\
-\texttt{[height=1.0in]} is an optional argument to control the figure size.
+	Add figures using the {\color{command}$\backslash$includegraphics} command.
+	\begin{center}
+	\includegraphics[height=15mm]{basicsOfLatex/figures/basicFigures}
+	\end{center}
+	The first file is stored in the same folder as the LaTeX file. The second is a couple folders away.
+	\vspace{0.5cm} \\
+	\emph{The files and folder names used should have no spaces.}
+	\vspace{0.5cm} \\
+	\texttt{[height=1.0in]} is an optional argument to control the figure size.
 \end{frame}
 
 \begin{frame} \frametitle{Figure centering}
-Just like tables, a figure can be centered:
-\begin{center}
-\includegraphics[height=1.1in]{basicsOfLatex/figures/centerFigure}
-\end{center}
-How does the second method look similar to the floating tables? (This is a floating figure.)
+	Just like tables, a figure can be centered:
+	\begin{center}
+	\includegraphics[height=1.1in]{basicsOfLatex/figures/centerFigure}
+	\end{center}
+	How does the second method look similar to the floating tables? (This is a floating figure.)
 \end{frame}
 
 \begin{frame} \frametitle{Adding a caption and referencing}
-Just like in the floating \texttt{\color{highlight}table} environment, a floating figure can have a caption and reference.
-\begin{center}
-\includegraphics[height=0.9in]{basicsOfLatex/figures/figureWithCaptionLabel}
-\end{center}
-Just like with tables, the \texttt{\color{command}$\backslash$label} command must come after the \texttt{\color{command}$\backslash$caption} command for the reference to work properly.
-\vspace{5mm} \\
-Figure$\sim${\color{command}$\backslash$ref}{\color{braces}$\{${\color{black}figureTemplate}$\}$} is where to find your figure template.
+	Just like in the floating \texttt{\color{highlight}table} environment, a floating figure can have a caption and reference.
+	\begin{center}
+	\includegraphics[height=0.9in]{basicsOfLatex/figures/figureWithCaptionLabel}
+	\end{center}
+	Just like with tables, the \texttt{\color{command}$\backslash$label} command must come after the \texttt{\color{command}$\backslash$caption} command for the reference to work properly.
+	\vspace{5mm} \\
+	Figure$\sim${\color{command}$\backslash$ref}{\color{braces}$\{${\color{black}figureTemplate}$\}$} is where to find your figure template.
 \end{frame}
 
 \subsection[Keeping organized]{Keeping organized}
 \begin{frame} \frametitle{Keeping organized}
 Some tips to keeping organized when using LaTeX:
-\begin{itemize}
-\item One LaTeX document per folder.
-\item When choosing a \texttt{\color{command}$\backslash$label} name for a figure, have it match the figure file name.
-\item Organize figure files into folders.
-\item If you use code to produce a figure, save it to the same folder as the figure and with the same name (but a different extension, of course).
-\item Remember, no spaces in file or folder names.
-\end{itemize}
+	\begin{itemize}
+		\item One LaTeX document per folder.
+		\item When choosing a \texttt{\color{command}$\backslash$label} name for a figure, have it match the figure file name.
+		\item Organize figure files into folders.
+		\item If you use code to produce a figure, save it to the same folder as the figure and with the same name (but a different extension, of course).
+		\item Remember, no spaces in file or folder names.
+	\end{itemize}
 \end{frame}
 
-\frame{ \frametitle{Practice}
-Using the image in \texttt{\color{highlight}latexTemp/figures/lower82/}, produce the following plot. Make it 0.8 inches tall, center it, add a caption, and add a reference. Be sure to write a sentence that references the Figure and compile your LaTeX document twice so the reference works. \\
-\begin{center}
-   \includegraphics[height=1.3in]{basicsOfLatex/latexTemp/figures/lower82/lower82}
-\end{center}
-Feel free to utilize examples in \texttt{\color{highlight}latexTemp.tex} or to use the LaTeX Float Figure template.
-}
-
+\begin{frame}	\frametitle{Practice}
+	
+	Using the image in \texttt{\color{highlight}latexTemp/figures/lower82/}, produce the following plot. Make it 0.8 inches tall, center it, add a caption, and add a reference. Be sure to write a sentence that references the Figure and compile your LaTeX document twice so the reference works. \\
+	
+		\begin{center}
+			\includegraphics[height=1.3in]{basicsOfLatex/latexTemp/figures/lower82/lower82}
+		\end{center}
+		
+	Feel free to utilize examples in \texttt{\color{highlight}latexTemp.tex} or to use the LaTeX Float Figure template.
+		
+\end{frame}
 
 \section[LaTeX In Browser]{LaTeX In Browser}
 
@@ -503,16 +508,6 @@ Feel free to utilize examples in \texttt{\color{highlight}latexTemp.tex} or to u
 %The ability to make elegant documents and figures is one of LaTeX's major draws. It offers users nearly unlimited control of their documents (even though it might feel a bit out of control at first).
 %}
 
-\subsection[What's next?]{What's next?}
-\frame{ \frametitle{LaTeX II}
-We will cover the following subjects in the second course.
-\begin{itemize}
-\item Math in LaTeX
-\item BibTeX
-\item Custom commands and environments
-\end{itemize}
-}
-
 \subsection[Materials]{Materials}
 \begin{frame} 
 		\frametitle{Materials}
@@ -530,11 +525,14 @@ We will cover the following subjects in the second course.
 \end{frame}
 
 \subsection[Homework]{Homework}
-\frame{ \frametitle{Homework}
-If you are taking this course for credit, turn in the following at the start of the next class. Include both the raw LaTeX $+$ the PDF. Printing two pages on \emph{each} side of the paper is encouraged to reduce paper waste. Alternatively, email the files. \\[5mm]
+\begin{frame}
+		\frametitle{Homework}
+		
+	If you are taking this course for credit, turn in the following at the start of the next class. Include both the raw LaTeX $+$ the PDF. Printing two pages on \emph{each} side of the paper is encouraged to reduce paper waste. Alternatively, email the files. \\[5mm]
 
-Write a 2 page document in LaTeX (or transfer another document not in LaTeX into LaTeX). The document must include (a) 2 or more paragraphs, (b) at least one figure, (c) at least one table, and (d) text references using {\color{command}$\backslash$label}s to the figure and table.
-}
+	Write a 2 page document in LaTeX (or transfer another document not in LaTeX into LaTeX). The document must include (a) 2 or more paragraphs, (b) at least one figure, (c) at least one table, and (d) text references using {\color{command}$\backslash$label}s to the figure and table.
+	
+\end{frame}
 
 
 \end{document}

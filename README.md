@@ -1,13 +1,15 @@
 ### About
 
-Repository that contains materials with simple intro to LaTeX world.
+Repository that contains materials with introduction materials for LaTeX usage.
 
 ### Project Organization
 
 Project organized as follows:
 
 * [Latex Basics](LaTeX_Basics)
-* [LaTeX Math and BibTeX](LaTeX_Math_and_BibTeX)
+* [LaTeX BibTeX](LaTeX_BibTeX)
+* [LaTeX Math](LaTeX_Math)
+* [LaTeX Tips](LaTeX_Tips)
 
 ### Credits
 
