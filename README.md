@@ -6,10 +6,10 @@ Introduction materials for LaTeX usage.
 
 Project organized as follows:
 
-* [Latex Basics](LaTeX_Basics) [pdf](LaTeX_Basics/basicsOfLatex.pdf)
-* [LaTeX BibTeX](LaTeX_BibTeX) [pdf](LaTeX_BibTeX/bibtexInLatex.pdf)
-* [LaTeX Math](LaTeX_Math) [pdf](LaTeX_Math/mathInLatex.pdf)
-* [LaTeX Tips](LaTeX_Tips) [pdf](LaTeX_Tips/tipsForLatex.pdf)
+* **Latex Basics** | [ALL](LaTeX_Basics) | [PDF](LaTeX_Basics/basicsOfLatex.pdf) |
+* **LaTeX BibTeX** | [ALL](LaTeX_BibTeX) | [PDF](LaTeX_BibTeX/bibtexInLatex.pdf) |
+* **LaTeX Math** | [ALL](LaTeX_Math) | [PDF](LaTeX_Math/mathInLatex.pdf) |
+* **LaTeX Tips** | [ALL](LaTeX_Tips) | [PDF](LaTeX_Tips/tipsForLatex.pdf) |
 
 
 ### Authors

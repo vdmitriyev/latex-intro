@@ -1,7 +1,7 @@
 *.log
 *.aux
 *.toc
-
+README.html
 *.DS_Store
 *gitignore~
 *.Rapp.history

@@ -15,6 +15,6 @@
 \beamer@subsectionintoc {4}{2}{Keeping organized}{33}{1}{4}
 \beamer@sectionintoc {5}{LaTeX In Browser}{35}{1}{5}
 \beamer@subsectionintoc {5}{1}{LaTeX In Browser}{35}{1}{5}
-\beamer@sectionintoc {6}{More}{38}{1}{6}
+\beamer@sectionintoc {6}{Summary}{38}{1}{6}
 \beamer@subsectionintoc {6}{1}{Materials}{38}{1}{6}
-\beamer@subsectionintoc {6}{2}{Homework}{39}{1}{6}
+\beamer@subsectionintoc {6}{2}{Practice}{39}{1}{6}
