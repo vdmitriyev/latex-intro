@@ -51,7 +51,6 @@
 \part{}
 
 \section[Getting started]{Getting started}
-
 \subsection[Getting started]{Getting started}
 
 \begin{frame} \frametitle{Installing LaTeX}
@@ -272,138 +271,6 @@ Add the package {\color{highlight}color} and add color to some of your text. For
 \end{frame}
 
 
-
-\section[Tables / tabbing]{Tables / tabbing}
-
-\subsection[Tabbing]{Tabbing}
-\begin{frame} \frametitle{Tabbing}
-Like in other text editors, LaTeX offers tabbing. While this environment tends to rarely be used (at least by me), it can be very useful under particular conditions.
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[height=1.3in]{basicsOfLatex/tabTable/tabbingExample}
-\end{figure}
-See {\color{highlight}latexTemp.tex} for a brief introduction to tabbing and a few examples.
-\end{frame}
-
-\subsection[Basic tables]{Basic tables}
-\begin{frame} \frametitle{Basic tables}
-Tables are created using the \texttt{\color{highlight}tabular} environment. The \text{\color{braces}\{}\texttt{lcr}\texttt{\color{braces}\}} gives the alignment. The ampersands ({\color{highlight}\&}) are used to define when to go to the next column.
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[height=0.55in]{basicsOfLatex/tabTable/basicTable}
-\end{figure}
-The \texttt{\color{command}$\backslash\backslash$} command tells LaTeX to start a new row.  \\
-\vspace{0.3cm}
-The result: \\
-\vspace{0.3cm}
-\begin{tabular}{lcr} % lcr means make the 1st column left aligned, the 2nd centered, and the 3rd right aligned
-	Left & Center & Right \\ % the amperstands (&) define where to start the next column
-	1     & 2           & 3  \\
-\end{tabular}
-\end{frame}
-
-\begin{frame} \frametitle{Centering and adding lines}
-Building the table up:
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[height=1.0in]{basicsOfLatex/tabTable/centeredTable}
-\end{figure}
-The result: \\
-\vspace{0.3cm}
-\begin{center} % center the table
-\begin{tabular}{l | rrrr} % the second 'l' is a vertical bar
-  \hline % add a horizontal line here
- 		           & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\
-  \hline
-(Intercept) & -0.2852   & 0.8434     & -0.34    & 0.7452 \\
-x                & 0.4192    & 0.1499     & 2.80     & 0.0266 \\
-   \hline
-\end{tabular}
-\end{center}
-\end{frame}
-
-\subsection[Captions \& referencing]{Captions \& referencing}
-\begin{frame} \frametitle{Floating table with a caption}
-To add a caption or label, the table must be \emph{floated} (i.e. add on the \texttt{\color{highlight}table} environment). Then \texttt{\color{command}$\backslash$caption} can be used:
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[height=0.6in]{basicsOfLatex/tabTable/floatTable}
-\end{figure}
-The output:
-\begin{table}[htbp]
-\begin{center} % center the table
-\begin{tabular}{l | rrrr} % the second 'l' is a vertical bar
-  \hline % add a horizontal line here
- 		           & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\
-  \hline
-(Intercept) & -0.2852   & 0.8434     & -0.34    & 0.7452 \\
-x                & 0.4192    & 0.1499     & 2.80     & 0.0266 \\
-   \hline
-\end{tabular}
-\end{center}
-\caption{A regression summary.}
-\end{table}
-The table is numbered when a caption is added in the \texttt{\color{highlight}article} document class.
-\end{frame}
-
-\begin{frame} \frametitle{Referencing}
-%Tables can be dynamically referenced (many examples in {\color{highlight}latexTemp.tex}).
-%\vspace{5mm} \\
-Suppose we are writing a document and refer to Table 4 in our text. Two days later, we decide to add another table earlier in the document. Now Table 4 is actually Table 5 and we need to change all the 4s to 5s (and 5s to 6s, and so on).
-\vspace{5mm} \\
-Instead, we tag each table with a unique label. We reference the label, not the number.
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[height=0.4in]{basicsOfLatex/tabTable/labelTable}
-\end{figure}
-\texttt{\color{command}$\backslash$label}\texttt{\color{braces}\{}\texttt{regressTable}\texttt{\color{braces}\}} labels the table and then this table can be referenced using the LaTeX code \texttt{Table$\sim$}\texttt{\color{command}$\backslash$ref}\texttt{\color{braces}\{}\texttt{regressTable}\texttt{\color{braces}\}}.
-\end{frame}
-
-\subsection[xtable]{xtable}
-\begin{frame} \frametitle{Using the R package \texttt{xtable}} 
-Inside R: \\
-\vspace{0.3cm} \small
-\hspace{0.3cm}\texttt{> library(xtable) \# may need install.packages('xtable')} \\
-\hspace{0.3cm}\texttt{> x <- 1:9} \\
-\hspace{0.3cm}\texttt{> z <- rnorm(9)} \\
-\hspace{0.3cm}\texttt{> y <- x$/$7 + z$^*$2 + rnorm(9)} \\
-\hspace{0.3cm}\texttt{> xtable(summary(lm(y $\sim$ x$+$z)))} \\
-\hspace{0.3cm}\texttt{... output that can be copied/pasted into LaTeX ...} \\
-\vspace{0.3cm} \normalsize
-R output directly copied/pasted into LaTeX:
-\begin{table}[ht]
-\begin{center}
-\begin{tabular}{rrrrr}
-  \hline
- & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\
-  \hline
-(Intercept) & -0.1563 & 0.6243 & -0.25 & 0.8107 \\
-  x & 0.1094 & 0.1145 & 0.96 & 0.3760 \\
-  z & 2.6170 & 0.4308 & 6.08 & 0.0009 \\
-   \hline
-\end{tabular}
-\end{center}
-\end{table}
-\end{frame}
-
-\begin{frame} \frametitle{Practice}
-	
-	Produce the following result:
-	\begin{center}
-	\begin{tabular}{l rrr}
-	\hline
-	& mean & sd & n \\
-	\hline
-	S1 & 6.5 & 1.3 & 17 \\
-	S2 & 12.2 & 1.4 & 25 \\
-	\hline
-	\end{tabular}
-	\end{center}
-	
-	Some examples may be utilized in \texttt{\color{highlight}latexTemp.tex}.
-	
-\end{frame}
-
 \section[Figures]{Figures}
 \subsection[Figures]{Figures}
 \begin{frame} \frametitle{Basic figures}
@@ -460,8 +327,140 @@ Some tips to keeping organized when using LaTeX:
 		
 \end{frame}
 
-\section[LaTeX In Browser]{LaTeX In Browser}
 
+\section[Tables / tabbing]{Tables / tabbing}
+
+\subsection[Tabbing]{Tabbing}
+\begin{frame} \frametitle{Tabbing}
+	Like in other text editors, LaTeX offers tabbing. While this environment tends to rarely be used (at least by me), it can be very useful under particular conditions.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[height=1.3in]{basicsOfLatex/tabTable/tabbingExample}
+	\end{figure}
+	See {\color{highlight}latexTemp.tex} for a brief introduction to tabbing and a few examples.
+\end{frame}
+
+\subsection[Basic tables]{Basic tables}
+\begin{frame} \frametitle{Basic tables}
+	Tables are created using the \texttt{\color{highlight}tabular} environment. The \text{\color{braces}\{}\texttt{lcr}\texttt{\color{braces}\}} gives the alignment. The ampersands ({\color{highlight}\&}) are used to define when to go to the next column.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[height=0.55in]{basicsOfLatex/tabTable/basicTable}
+	\end{figure}
+	The \texttt{\color{command}$\backslash\backslash$} command tells LaTeX to start a new row.  \\
+	\vspace{0.3cm}
+	The result: \\
+	\vspace{0.3cm}
+	\begin{tabular}{lcr} % lcr means make the 1st column left aligned, the 2nd centered, and the 3rd right aligned
+		Left & Center & Right \\ % the amperstands (&) define where to start the next column
+		1     & 2           & 3  \\
+	\end{tabular}
+\end{frame}
+
+\begin{frame} \frametitle{Centering and adding lines}
+	Building the table up:
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[height=1.0in]{basicsOfLatex/tabTable/centeredTable}
+	\end{figure}
+	The result: \\
+	\vspace{0.3cm}
+	\begin{center} % center the table
+		\begin{tabular}{l | rrrr} % the second 'l' is a vertical bar
+			\hline % add a horizontal line here
+			& Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\
+			\hline
+			(Intercept) & -0.2852   & 0.8434     & -0.34    & 0.7452 \\
+			x                & 0.4192    & 0.1499     & 2.80     & 0.0266 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\subsection[Captions \& referencing]{Captions \& referencing}
+\begin{frame} \frametitle{Floating table with a caption}
+	To add a caption or label, the table must be \emph{floated} (i.e. add on the \texttt{\color{highlight}table} environment). Then \texttt{\color{command}$\backslash$caption} can be used:
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[height=0.6in]{basicsOfLatex/tabTable/floatTable}
+	\end{figure}
+	The output:
+	\begin{table}[htbp]
+		\begin{center} % center the table
+			\begin{tabular}{l | rrrr} % the second 'l' is a vertical bar
+				\hline % add a horizontal line here
+				& Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\
+				\hline
+				(Intercept) & -0.2852   & 0.8434     & -0.34    & 0.7452 \\
+				x                & 0.4192    & 0.1499     & 2.80     & 0.0266 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{A regression summary.}
+	\end{table}
+	The table is numbered when a caption is added in the \texttt{\color{highlight}article} document class.
+\end{frame}
+
+\begin{frame} \frametitle{Referencing}
+	%Tables can be dynamically referenced (many examples in {\color{highlight}latexTemp.tex}).
+	%\vspace{5mm} \\
+	Suppose we are writing a document and refer to Table 4 in our text. Two days later, we decide to add another table earlier in the document. Now Table 4 is actually Table 5 and we need to change all the 4s to 5s (and 5s to 6s, and so on).
+	\vspace{5mm} \\
+	Instead, we tag each table with a unique label. We reference the label, not the number.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[height=0.4in]{basicsOfLatex/tabTable/labelTable}
+	\end{figure}
+	\texttt{\color{command}$\backslash$label}\texttt{\color{braces}\{}\texttt{regressTable}\texttt{\color{braces}\}} labels the table and then this table can be referenced using the LaTeX code \texttt{Table$\sim$}\texttt{\color{command}$\backslash$ref}\texttt{\color{braces}\{}\texttt{regressTable}\texttt{\color{braces}\}}.
+\end{frame}
+
+\subsection[xtable]{xtable}
+\begin{frame} \frametitle{Using the R package \texttt{xtable}} 
+	Inside R: \\
+	\vspace{0.3cm} \small
+	\hspace{0.3cm}\texttt{> library(xtable) \# may need install.packages('xtable')} \\
+	\hspace{0.3cm}\texttt{> x <- 1:9} \\
+	\hspace{0.3cm}\texttt{> z <- rnorm(9)} \\
+	\hspace{0.3cm}\texttt{> y <- x$/$7 + z$^*$2 + rnorm(9)} \\
+	\hspace{0.3cm}\texttt{> xtable(summary(lm(y $\sim$ x$+$z)))} \\
+	\hspace{0.3cm}\texttt{... output that can be copied/pasted into LaTeX ...} \\
+	\vspace{0.3cm} \normalsize
+	R output directly copied/pasted into LaTeX:
+	\begin{table}[ht]
+		\begin{center}
+			\begin{tabular}{rrrrr}
+				\hline
+				& Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\
+				\hline
+				(Intercept) & -0.1563 & 0.6243 & -0.25 & 0.8107 \\
+				x & 0.1094 & 0.1145 & 0.96 & 0.3760 \\
+				z & 2.6170 & 0.4308 & 6.08 & 0.0009 \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+\end{frame}
+
+\begin{frame} \frametitle{Practice}
+	
+	Produce the following result:
+	\begin{center}
+		\begin{tabular}{l rrr}
+			\hline
+			& mean & sd & n \\
+			\hline
+			S1 & 6.5 & 1.3 & 17 \\
+			S2 & 12.2 & 1.4 & 25 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	Some examples may be utilized in \texttt{\color{highlight}latexTemp.tex}.
+	
+\end{frame}
+
+
+\section[LaTeX In Browser]{LaTeX In Browser}
 \subsection{LaTeX In Browser}
 	
 	\begin{frame} \frametitle{Usage LaTeX in Browser}
