@@ -54,59 +54,77 @@
 \subsection[Getting started]{Getting started}
 
 \begin{frame} \frametitle{Installing LaTeX}
-{\bf Mac Installation. } Download MacTeX, which can be found on {\color{highlight}http://www.tug.org/mactex/}. LaTeX can then be accessed via the program TeXShop, which is included in this installation. \\
-\vspace{0.5cm}
-{\bf Windows Installation. } Download proTeXt, which can be found on {\color{highlight}http://www.tug.org/protext/}\footnote{Another option: {\color{highlight}http://www.winshell.de/}. (Winshell and MikTeX)}. LaTeX can be accessed via TeXnicCenter, which is included in this installation. \\
-\vspace{0.5cm}
-Both the MacTeX and proTeXt downloads are very large: 1.2GB and 540MB, respectively. \\
-\vspace{0.5cm}
-The interfaces for Macs and PCs are different, however, the LaTeX ``code'' works for both.
+	
+	{\bf Windows Installation. } Download proTeXt, which can be found on {\color{highlight}http://www.tug.org/protext/}\footnote{Another option: {\color{highlight}http://www.winshell.de/}. (Winshell and MikTeX)}. LaTeX can be accessed via TeXnicCenter, which is included in this installation. \\
+	
+	{\bf Mac Installation. } Download MacTeX, which can be found on {\color{highlight}http://www.tug.org/mactex/}. LaTeX can then be accessed via the program TeXShop, which is included in this installation. \\
+	\vspace{0.5cm}
+
 \end{frame}
 
-\begin{frame} \frametitle{Opening TeXShop}
-{\color{highlight}Finder (icon: \hspace{1mm}\includegraphics[height=0.28cm]{basicsOfLatex/gettingStarted/finder}\hspace{1mm}) $\to$ Applications $>$ TeX $>$ TeXShop} \\
-\begin{center}
-\includegraphics[height=1.7in]{basicsOfLatex/gettingStarted/openingTexshop}
-\end{center}
+\begin{frame} \frametitle{Installing LaTeX}
+	
+	\begin{itemize}
+		\item Be careful that the distributive with LaTeX are very big. Use instead your own disk copy.
+		\item Despite interfaces for Mac, Windows, and Linux are different, the same LaTeX ``code'' must works under all operating systems.
+		\item There are many tools available to edit LaTeX files (actually any text editor can do that). But it order to make things easier here we are going to use TeXStudio ({\color{highlight}http://www.texstudio.org/}).
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame} \frametitle{Opening TeXStudio}
+	Download and install TeXStudio ({\color{highlight}http://www.texstudio.org/}) on your PC in case it is not installed. Than navigate to directory that contains 'TeXStudio' and start it.
+
+	\begin{center}
+		\includegraphics[height=1.7in]{basicsOfLatex/gettingStarted/texstudioFolder}
+	\end{center}
 \end{frame}
 
 \begin{frame} \frametitle{Creating a basic document}
-{\bf Open a file. } Use {\color{highlight}File $>$ New} or \texttt{\color{highlight}command-N} (\texttt{\color{highlight}\emph{apple}-N}) to open a new document if one isn't already open. \\
-\vspace{0.7cm}
+	
+	In order to start working with LaTeX you will need template of document. You can use given one (usually conferences or book has their own LaTeX templates), you standard one or create your own template.\\
+	
+	\vspace{0.5cm}
+		
+	{\bf Open a file.}  Use {\color{highlight}File $>$ New} or \texttt{\color{highlight}Ctrl+N}  to open a new document if one isn't already open. \\
 
-{\bf Templates. } Choose the LatexTemplate.
-\begin{center}
-\includegraphics[height=0.95in]{basicsOfLatex/gettingStarted/chooseTemplate}
-\end{center}
+	\vspace{0.5cm}
+
+	{\bf Templates}. Use {\color{highlight} File $>$ New From Template}. \\
+	\begin{center}
+		\includegraphics[height=0.95in]{basicsOfLatex/gettingStarted/texstudioTemplate}
+	\end{center}
 \end{frame}
 
 \begin{frame} \frametitle{Creating a basic document}
 Update the \texttt{\color{command}$\backslash$title}, \texttt{\color{command}$\backslash$author}, and then type a sentence above the last line, i.e. type right above \texttt{\color{command}$\backslash$end}{\color{braces}\{}document{\color{braces}\}}. Create a folder on the desktop and then save this file into that folder.
-\begin{center}
-\includegraphics[height=2.0in]{basicsOfLatex/gettingStarted/firstDoc}
-\end{center}
+	\begin{center}
+		\includegraphics[height=2.0in]{basicsOfLatex/gettingStarted/texstudioFirstDocument}
+	\end{center}
 \end{frame}
 
 \begin{frame} \frametitle{Typesetting / Compiling}
-Hit \texttt{\color{highlight}command-T} or click the {\color{highlight}Typeset} button in the upper left of the window. After typesetting, double-click on the PDF page to magnify. Try triple-clicking... and quadruple-clicking.
+Different tools use different shortcuts to translate LaTeX file into PDF. Hit \texttt{\color{highlight}F5} or click the green {\color{highlight}Play} button at the top panel. After typesetting, double-click on the PDF page to magnify. Try triple-clicking... and quadruple-clicking.
 \begin{center}
-\includegraphics[height=2.0in]{basicsOfLatex/gettingStarted/firstOutput}
+	\includegraphics[height=2.0in]{basicsOfLatex/gettingStarted/texstudiofirstOutput}
 \end{center}
 \end{frame}
 
 \begin{frame} \frametitle{Extra files}
-Typesetting creates a bunch of other files.
+Compilation creates a bunch of other files.
 \begin{center}
-\includegraphics[height=1.0in]{basicsOfLatex/gettingStarted/outputFiles}
+	\includegraphics[height=1.0in]{basicsOfLatex/gettingStarted/texstudioExtraFiles}
 \end{center}
+
 While each of these files has a purpose, only one file -- in addition to the original LaTeX file -- is of interest: the PDF. As more methods of LaTeX are used, this list of LaTeX output files might grow... but again, they (except the .tex and .pdf files) can just be ignored for the vast majority of LaTeX use.
 \end{frame}
 
 \begin{frame} \frametitle{Console}
 When the code was typeset, two windows popped up. The {\color{highlight}console} tells you what LaTeX is doing when it runs through the document. If there is an error (or just something LaTeX doesn't like), the console will tell you. If the error is critical, LaTeX will stop compiling:
-\begin{center}
-\includegraphics[height=1.2in]{basicsOfLatex/gettingStarted/consoleFail}
-\end{center}
+	\begin{center}
+		\includegraphics[height=1.2in]{basicsOfLatex/gettingStarted/texstudioConsole}
+	\end{center}
 While it is always good to fix the problem immediately (hit \includegraphics[height=0.25cm]{basicsOfLatex/gettingStarted/gotoError}), some errors can be ignored by hitting {\color{highlight}return} on the keyboard.
 \end{frame}
 
@@ -146,28 +164,38 @@ Any text following a {\color{comment}\%} on \emph{that line only} will be ignore
 %text text text text text text text text text text text text text text text
 %text text text text text text text text text text text text text text text
 
-\begin{frame} \frametitle{Dual screens}
-In TeXShop, there is also the option to have dual screens by clicking on the icon to the right of {\color{highlight}Templates}: \includegraphics[height=0.25cm]{basicsOfLatex/gettingStarted/dualScreenIcon}
-\begin{center}
-\includegraphics[height=1.5in]{basicsOfLatex/gettingStarted/dualScreens}
+\begin{frame} \frametitle{Navigation panel}
+	
+In TeXStudio has a very nice feature such as navigation panel.
+
+\begin{center} 					\includegraphics[height=5cm]{basicsOfLatex/gettingStarted/texstudioNavigationPanel}
 \end{center}
+
 This can be very useful when writing or editing a long document.
 \end{frame}
 
 
 \begin{frame} \frametitle{Example template}
-Download the following zipped folder\footnote{If this URL no longer works, find the zip file on {\color{highlight}http://scc.stat.ucla.edu/} in the mini-course section.} to your desktop \\
+	
+Download the following zipped folder to your desktop
 \begin{center}
-{\color{highlight} http://www.stat.ucla.edu/$\sim$david/latexTemp.zip}
+	{\color{highlight} https://github.com/vdmitriyev/latex-intro/archive/master.zip}
 \end{center}
-Unzip the file (on a Mac, double-click). {\color{highlight}latexTemp}'s notable contents:
+
+Open template file {\color{highlight}latexTemp}. 
+
+File is loaded in unziped folder under {LaTeX\_Basics/documents/latexTemp} path. 
+
+Some notable contents:
 \begin{itemize}
-\item Sample document ({\color{highlight}latexTemp.tex})
-\item PDF of this presentation
-\item {\color{highlight}figures} folder
-\item UCLA thesis template files: {\color{highlight}uclathes-1.2} and {\color{highlight}uclathesUse}
+	\item Sample document ({\color{highlight}latexTemp.tex})
+	\item PDF of this presentation
+	\item {\color{highlight}figures} folder
+	\item UCLA thesis template files: {\color{highlight}uclathes-1.2} and {\color{highlight}uclathesUse}
 \end{itemize}
+
 {\color{highlight}latexTemp.tex} follows the most of this presentation and is filled with examples and extra comments. Open this file now.
+
 \end{frame}
 
 
@@ -248,15 +276,6 @@ which results in a bulleted list such as the following:
 A couple additional examples are in {\color{highlight}latexTemp.tex}.
 \end{frame}
 
-\begin{frame} \frametitle{Macros}
-Many more text alterations can be done using the Macros.
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[height=1.8in]{basicsOfLatex/general/macros}
-\end{figure}
-Macros offer many many options to alter text.
-\end{frame}
-
 \begin{frame} \frametitle{Practice}
 Write two short paragraphs that includes a few words or phrases that have been \textit{italicized} and also some that have been \textbf{bolded}.
 
@@ -320,7 +339,7 @@ Some tips to keeping organized when using LaTeX:
 	Using the image in \texttt{\color{highlight}latexTemp/figures/lower82/}, produce the following plot. Make it 0.8 inches tall, center it, add a caption, and add a reference. Be sure to write a sentence that references the Figure and compile your LaTeX document twice so the reference works. \\
 	
 		\begin{center}
-			\includegraphics[height=1.3in]{assignments/latexTemp/figures/lower82/lower82}
+			\includegraphics[height=1.3in]{documents/latexTemp/figures/lower82/lower82}
 		\end{center}
 		
 	Feel free to utilize examples in \texttt{\color{highlight}latexTemp.tex} or to use the LaTeX Float Figure template.
