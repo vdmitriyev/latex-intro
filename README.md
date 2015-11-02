@@ -1,13 +1,13 @@
 ### About
 
-Introduction materials for LaTeX usage.
+Introductory materials for LaTeX usage.
 
 ### Project Organization
 
 Project organized as follows:
 
 * **Latex Basics** | [ALL](LaTeX_Basics) | [PDF](LaTeX_Basics/basicsOfLatex.pdf) |
-* **LaTeX BibTeX** | [ALL](LaTeX_BibTeX) | [PDF](LaTeX_BibTeX/bibtexInLatex.pdf) |
+* **LaTeX BibTeX** | [ALL](LaTeX_BibTeX) | [PDF](LaTeX_BibTeX/bibtexWithLatex.pdf) |
 * **LaTeX Math** | [ALL](LaTeX_Math) | [PDF](LaTeX_Math/mathInLatex.pdf) |
 * **LaTeX Tips** | [ALL](LaTeX_Tips) | [PDF](LaTeX_Tips/tipsForLatex.pdf) |
 
