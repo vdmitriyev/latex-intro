@@ -1,6 +1,8 @@
 \documentclass[slidestop,compress,mathserif]{beamer}
 \usetheme{Frankfurt}
 \usecolortheme{seagull}
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
 
 % Load packages
 \usepackage{alltt}
@@ -11,6 +13,7 @@
 \usepackage{amsmath}
 \usepackage{epstopdf}
 \usepackage{feynmp}
+\usepackage{hyperref}
 
 %\usepackage{pgfpages}
 %\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
@@ -530,14 +533,23 @@ Some tips to keeping organized when using LaTeX:
 \begin{frame} 
 		\frametitle{Materials}
 
-		Useful tools
+		Tools
 		\begin{itemize}
 			\item \href{http://www.tablesgenerator.com/latex_tables}{LaTeX Tables Generator}
 			\item \href{http://truben.no/table/}{LaTeX Table Editor}
 		\end{itemize}
-		Books
+		
+		Books, Articles
 		\begin{itemize}
 			\item \emph{Guide to LaTeX}, by Helmut Kopka and Patrick W. Daly
+			\item \href{http://mirror.physik-pool.tu-berlin.de/tex-archive/info/first-latex-doc/first-latex-doc.pdf}{Getting something out of LATEX}, by Jim Hef­feron
+		\end{itemize}				
+		
+		Online materials
+		\begin{itemize}
+			\item \href{https://www.tug.org/begin.html}{Getting Started with TeX, LaTeX, and Friends}
+			\item \href{http://www.andy-roberts.net/writing/latexl}{Getting to Grips with LaTeX}
+			\item \href{http://wch.github.io/latexsheet/}{LaTeX cheat sheet}
 		\end{itemize}				
 		
 \end{frame}
