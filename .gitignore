@@ -1,9 +1,10 @@
+README.html
 *.log
 *.aux
 *.toc
-README.html
 *.DS_Store
 *gitignore~
+*.synctex.gz
 *.Rapp.history
 *~
 Icon[^/]
