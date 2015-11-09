@@ -1,13 +1,17 @@
 
+\section[Overview]{Overview}
+\subsection[Overview]{Overview}
 
-\section[BibTeX Overview]{BibTeX Overview}
-
-\begin{frame}  \frametitle{Why use BibTeX?}
+\begin{frame}  \frametitle{Why to use BibTeX?}
 	There are a number of very good reasons to use BibTeX instead of manual creation of bibliographies.
 	\begin{itemize}
+		\item Human readable format.
 		\item Automatic creation of bibliographies.
-		\item Easily change bibliographic styles.
+		\item Easily to change bibliographic styles.
 		\item Identification of missing sources referenced in text.
+		\item Wide acceptance in communities (academia, industry, publishing, etc.).
+		\item A lot of software tools working and supporting BibTeX (\href{http://jabref.sourceforge.net/}{JabRef}, \href{http://www.docear.org/software/add-ons/docear4word/overview/}{Docear4Word} etc.)
+		\item Cross-platform and easy integration (e.g, web-site, CV, etc.)			
 	\end{itemize}
 \end{frame}
 
@@ -30,7 +34,8 @@
 	\end{itemize}
 \end{frame}
 
-\section[Building the database]{Building the database}
+\section[Reference Database]{Reference Database}
+\subsection[Building the database]{Building the database}
 
 \begin{frame}  \frametitle{Sample reference entry}
 	We want to create a reference, similar to the following, for each of the item we want to cite.
@@ -62,13 +67,14 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}  \frametitle{An alternative}
-	If you don't want to build your data base up in such a bare-bones manner, you might try
+\begin{frame}  \frametitle{Software for BibTeX database creation}
+	If you don't want to build your data base up in such a bare-bones manner use one of the following software tools:
 	\begin{itemize}
-		\item BibDesk: Macs.
-		\item JabRef: Macs, PCs, Linux.
+		\item \href{http://jabref.sourceforge.net/}{JabRef}
+		\item \href{http://bibdesk.sourceforge.net/}{BibDesk}
+		\item \href{https://en.wikipedia.org/wiki/Comparison\_of\_reference\_management\_software}{Collection of reference management tools}
 	\end{itemize}
-	Both of these programs are free and available online. Others exist, and I have only personally used BibDesk.
+	Most of the programs are free and available online.
 \end{frame}
 
 \begin{frame}  \frametitle{If you do manage your own...}
@@ -100,7 +106,9 @@
 	These string entries must be defined in the database above where they are used.
 \end{frame}
 
-\subsection{Citing a reference}
+
+\section{Citing}
+\subsection{Citing}
 
 \begin{frame}  \frametitle{Citing a reference}
 	There are four commands that can be used.
@@ -110,7 +118,7 @@
 		\item {\color{command}$\backslash$citep\color{braces}$\{${\color{black}labelName}$\}$} (Surname, year), e.g. (Zotova et al., 2000).
 		\item {\color{command}$\backslash$nocite\color{braces}$\{${\color{black}labelName}$\}$} Not cited but will show up in bibliography.
 	\end{itemize}
-	The first and last work with the \texttt{\color{highlight}uclathes} class. The second two are used in the \texttt{\color{highlight}natbib} package (highly recommended for non-thesis papers).
+	The first and last work with the \texttt{\color{highlight}uclathes} class. The second two are used in the \texttt{\color{highlight}ieeetr} package (highly recommended for non-thesis papers).
 \end{frame}
 
 \begin{frame}  \frametitle{Other commands in your document}
@@ -119,28 +127,22 @@
 		\item[] {\color{command}$\backslash$bibliographystyle\color{braces}$\{${\color{black}yourStyle}$\}$}
 		\item[] {\color{command}$\backslash$bibliography\color{braces}$\{${\color{black}databaseName}$\}$}
 	\end{itemize}
-	The style command can be moved higher (it doesn't matter). If you use the \texttt{\color{highlight}natbib} package, then you must add it with the other packages:
+	The style command can be moved higher (it doesn't matter). If you use the \texttt{\color{highlight}ieeetr} package it no problem usually. But in case you are using some custom referencing you must add it with the other packages.
 	\begin{itemize}
-		\item[] {\color{command}$\backslash$usepackage\color{braces}$\{${\color{black}natbib}$\}$}
+		\item[] {\color{command}$\backslash$usepackage\color{braces}$\{${\color{black}ieeetr}$\}$}
 	\end{itemize}
-	I have not gotten this package to work with the UCLA thesis template.
 \end{frame}
 
 \subsection{Typesetting}
 
 \begin{frame}  \frametitle{Making the bibliography}
-	If you have made your reference database, made citations, and inserted the bibliography commands in your text, then you are ready to create the bibliography. In TeXShop, there are a few simple steps to finish:
-	\begin{itemize}
-		\item Typeset your LaTeX document as usual.
-		\item Change the Typesetting option from LaTeX to BibTeX:
-		
-		\vspace{1mm}
-		
-		\includegraphics[height=15mm]{bibtex/bibtexTypeset}\hspace{4mm}{}
-		
-		\item Typeset again with BibTeX.
-		\item Return the Typesetting option back to LaTeX and compile \textbf{twice} more.
-	\end{itemize}
+	
+	If you have made your reference database, made citations, and inserted the bibliography commands in your text, all you need to do is to compile your document your are working on. 
+	
+	\vspace{0.5cm}
+	
+	But you have to know that in order to make proper \textbf{bibliographic reference} LaTeX will need to \textbf{run through the document} multiple of times. And usually it's done in any LaTeX editor  (such as TeXStudio or TeXMaker) automatically. But in case you are using command line you need to take care of bibliography file creation on your own.
+	
 \end{frame}
 
 \subsection{Building your own style file (the easy way)}
@@ -165,10 +167,9 @@
 	Find and copy the file you named in step (3) with extension \texttt{.bst}. Put it in the folder with whatever files for which you will make a bibliography with this style or in your bibliography folder (however you reference it in your LaTeX document).
 \end{frame}
 
-\section{Practice}
-
 \begin{frame}  \frametitle{Practice}
-	Open the \texttt{\color{highlight}latexTemp.tex} file and go to the last section. Add a bibliography reference of {\color{command}$\backslash$citet}{\color{braces}$\{${\color{black}victor}$\}$}. Also add a reference with {\color{command}$\backslash$citep}{\color{braces}$\{${\color{black}victor}$\}$} and typeset (all four steps). What is the difference between your references? How would you use each in a paper?\end{frame}
+	Open the \texttt{\color{highlight}latexTemp.tex} file and go to the last section. Add a bibliography reference of {\color{command}$\backslash$citet}{\color{braces}$\{${\color{black}victor}$\}$}. Also add a reference with {\color{command}$\backslash$citep}{\color{braces}$\{${\color{black}victor}$\}$} and typeset (all four steps). What is the difference between your references? How would you use each in a paper?
+\end{frame}
 
 
 
