@@ -3,19 +3,101 @@
 
 \begin{frame}  \frametitle{Overview}
 	\begin{itemize}
+		\item Writing publications in team
 		\item Counters
 		\item Commands
 		\item Environments
 	\end{itemize}
 \end{frame}
 
-\begin{frame}  \frametitle{Motivation}
-	\begin{itemize}
-		\item LaTeX is very flexible
-		\item What work on one PC may work differently on others
-		\item Community is very important
+\section[Writing in Team]{Writing in Team}
+\subsection[Writing in Team]{Writing in Team}
+
+\begin{frame}  \frametitle{Challenages of writing in teams}
+
+	\begin{itemize}	
+		\item Scientific publications are written by group of people
+		\item Different people are used to different software
+		\item Publishers have their own standards and templates
+		\item Never ending problem is a synchronization of changes
 	\end{itemize}
 \end{frame}
+
+
+\begin{frame}  \frametitle{Using LaTeX for writing \textbf{team} publication}
+	
+	Common steps to be followed in order simplify writing publication in team.
+	
+	\vspace{0.4cm}
+	
+	
+	\begin{itemize}	
+		\item Separate content of the publication from it's processing part
+		\item Make writing process transparent
+		\begin{itemize}
+			\item Host and share all the publication files through the dropbox or SVN
+		\end{itemize}
+		\item Organize versioning
+		\begin{itemize}
+			\item Default feature of documents hosting services like dropbox and SVN
+		\end{itemize}
+		\item Separate part of each author into different TeX file or files
+		\begin{itemize}
+			\item Include them with {\color{command}$\backslash$input\color{braces}$\{${\color{black}fileName}$\}$\color{black}} directive
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}  \frametitle{Organizing your folder}
+	
+	An example how folder with all relevant to publication files can be organized.
+	
+	\begin{columns}
+		\column{0.5\textwidth} %half slide's text width
+		\begin{itemize}
+			\item \textbf{abstract}
+				\begin{itemize}
+					\item contains abstract part of the publication
+				\end{itemize}
+			\item \textbf{authors}
+				\begin{itemize}
+					\item contains authors listed with accordance to the template
+				\end{itemize}					
+			\item \textbf{bibliography}
+			\begin{itemize}
+				\item contains a BibTeX file with all cited works
+			\end{itemize}					
+			\item \textbf{models}
+			\begin{itemize}					
+				\item contains the images, diagrams etc.
+			\end{itemize}					
+		\end{itemize}
+
+		\column{0.5\textwidth} %half slide's text width
+			\begin{center}
+				\includegraphics[height=2.2in]{tips/images/sampleFolderStructure}
+			\end{center}
+	\end{columns}
+		
+
+	
+\end{frame}
+
+\begin{frame}  \frametitle{Organizing your main TeX file}
+	
+	An example how main TeX file that actually contains only references to content in other TeX files can be organized.
+	
+	\vspace{0.2cm}
+	
+	\begin{center}
+		\includegraphics[height=2.4in]{tips/images/sampleMainTeXFile}
+	\end{center}
+	
+\end{frame}
+
+
+
 
 
 \section[Counters]{Counters}
