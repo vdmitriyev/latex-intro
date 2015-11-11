@@ -11,6 +11,10 @@ Project organized as follows:
 * **LaTeX Math** | [ALL](LaTeX_Math) | [PDF](LaTeX_Math/mathInLatex.pdf) |
 * **LaTeX Tips** | [ALL](LaTeX_Tips) | [PDF](LaTeX_Tips/tipsForLatex.pdf) |
 
+### Changing Language In TexStudio
+* [How to change the language of the TeXStudio?](http://tex.stackexchange.com/questions/139599/how-to-change-the-language-of-the-texstudio)
+    - ```Option -> Configure TeXstudio -> General -> Language```
+
 
 ### Authors
 
