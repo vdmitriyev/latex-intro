@@ -19,6 +19,7 @@ Project organized as follows:
 ### Authors
 
 * Viktor Dmitriyev
+* David Diez
 
 ### Credits
 
