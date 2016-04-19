@@ -18,7 +18,7 @@ Project organized as follows:
 
 ### Useful LaTeX related online tools
 
-* [papeeria - Online LaTeX Editor (Free and easy)(http://www.papeeria.com/)
+* [papeeria - Online LaTeX Editor (Free and easy)](http://www.papeeria.com/)
 * [Interactive LaTeX Editor](http://arachnoid.com/latex/)
 * [LaTeX Tables Generator](http://www.tablesgenerator.com/latex_tables)
 * [LaTeX Table Editor](http://truben.no/table/)
