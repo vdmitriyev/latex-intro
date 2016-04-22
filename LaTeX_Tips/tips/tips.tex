@@ -13,7 +13,7 @@
 \section[Writing in Team]{Writing in Team}
 \subsection[Writing in Team]{Writing in Team}
 
-\begin{frame}  \frametitle{Challenages of writing in teams}
+\begin{frame}  \frametitle{Challenges of writing in teams}
 
 	\begin{itemize}	
 		\item Scientific publications are written by group of people
@@ -49,7 +49,22 @@
 \end{frame}
 
 
-\begin{frame}  \frametitle{Organizing your folder}
+\begin{frame}  \frametitle{Organizer and time saver in LaTeX - {\color{command}$\backslash$input\color{braces}$\{${\color{black}}$\}$\color{black}}}
+	The {\color{command}$\backslash$include} command is useful for long documents:
+	\vspace{1mm} \\
+	\begin{itemize}
+		\item[] {\color{command}$\backslash$include}{\color{braces}$\{${\color{black}otherDocName}$\}$}
+	\end{itemize}
+	\vspace{1mm}
+	For instance, this presentation actually calls three separate documents: one for each big section. Here is a example that facilitated better structure of current presentation and saved a lot of time:
+	\vspace{1mm} \\
+	\begin{itemize}
+		\item[] \lcom{include}\larg{tips/tips} {\color{red}\% ``tips'' document in the ``tips'' folder}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}  \frametitle{Organizing your folders on your disk properly}
 	
 	An example how folder with all relevant to publication files can be organized.
 	
@@ -80,8 +95,6 @@
 			\end{center}
 	\end{columns}
 		
-
-	
 \end{frame}
 
 \begin{frame}  \frametitle{Organizing your main TeX file}
@@ -97,7 +110,17 @@
 \end{frame}
 
 
-
+\begin{frame}  \frametitle{Materials}
+	
+	More information can be found in following article:
+	
+	\vspace{0.2cm}
+	
+	\begin{center}
+			\href{http://vdmitriyev.github.io/blog/how-to-write-a-team-publication-in-latex-and-dont-get-mad.html}{How to Write a Team Publication in LaTeX and Dont Get Mad}
+	\end{center}
+	
+\end{frame}
 
 
 \section[Counters]{Counters}
