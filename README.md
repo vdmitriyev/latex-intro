@@ -15,6 +15,10 @@ Project organized as follows:
 
 * [How to change the language of the TeXStudio?)[http://tex.stackexchange.com/questions/139599/how-to-change-the-language-of-the-texstudio)
     - ```Option -> Configure TeXstudio -> General -> Language```
+### Other materials and courses
+
+* [Writing your papers and thesis more effectively](https://github.com/kks32/writing-thesis-effectively)
+* [Free & Interactive Online Introduction to LaTeX](https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1#.Wo1JM4PwaJA)
 
 ### Useful LaTeX related online tools
 
